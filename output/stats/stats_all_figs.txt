@@ -1,0 +1,1257 @@
+[1] "############################"
+[1] "Figure 1a"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( genome_size )"
+[1] ""
+[1] "------NO INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.89906 -0.42651  0.00679  0.43303  1.40263 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept) -0.04097    0.06711  -0.611    0.542
+sub[[x]]     0.20811    0.12812   1.624    0.105
+
+Residual standard error: 0.6041 on 618 degrees of freedom
+Multiple R-squared:  0.004251,	Adjusted R-squared:  0.00264 
+F-statistic: 2.639 on 1 and 618 DF,  p-value: 0.1048
+
+[1] "############################"
+[1] "Figure 1b"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( d1_mid )"
+[1] ""
+[1] "------NO INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.82289 -0.40900  0.03862  0.40038  1.25091 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept) -0.002041   0.028270  -0.072    0.942
+sub[[x]]     0.046321   0.095196   0.487    0.627
+
+Residual standard error: 0.5759 on 519 degrees of freedom
+Multiple R-squared:  0.000456,	Adjusted R-squared:  -0.00147 
+F-statistic: 0.2368 on 1 and 519 DF,  p-value: 0.6268
+
+[1] "############################"
+[1] "Figure 1c"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( d1_mid )"
+[1] ""
+[1] "------NO INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.85849 -0.10506  0.01328  0.11198  0.54821 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.581444   0.003672 158.329  < 2e-16 ***
+sub[[x]]    0.086046   0.013192   6.522 7.92e-11 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1732 on 3466 degrees of freedom
+Multiple R-squared:  0.01213,	Adjusted R-squared:  0.01184 
+F-statistic: 42.54 on 1 and 3466 DF,  p-value: 7.923e-11
+
+[1] "############################"
+[1] "Figure 2"
+[1] "------NO INTRACELLULAR------"
+
+Call:
+lm(formula = temp_adjusted_maxgrowth ~ poly(d1_mid_log10, 2) + 
+    habitat, data = sub)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.78101 -0.36857  0.03893  0.38100  1.25985 
+
+Coefficients:
+                       Estimate Std. Error t value Pr(>|t|)    
+(Intercept)            -0.17462    0.09907  -1.763  0.07857 .  
+poly(d1_mid_log10, 2)1  0.24221    0.53795   0.450  0.65273    
+poly(d1_mid_log10, 2)2 -3.17281    0.53411  -5.940 5.26e-09 ***
+habitatMarine           0.18982    0.12913   1.470  0.14218    
+habitatSoil            -0.05100    0.12710  -0.401  0.68839    
+habitatThermal          0.30029    0.11289   2.660  0.00805 ** 
+habitatEndotherm        0.61578    0.12450   4.946 1.03e-06 ***
+habitatEctotherm       -0.10480    0.16022  -0.654  0.51333    
+habitatOther            0.09572    0.10490   0.912  0.36196    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.5333 on 512 degrees of freedom
+Multiple R-squared:  0.1543,	Adjusted R-squared:  0.141 
+F-statistic: 11.67 on 8 and 512 DF,  p-value: 2.643e-15
+
+[1] "############################"
+[1] "Figure S1"
+[1] ""
+[1] "y = log10( coding_genes ) vs x = log10( genome_size )"
+[1] ""
+[1] "------WITH INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.43916 -0.01898  0.00252  0.02220  0.23811 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 2.966292   0.001558  1904.4   <2e-16 ***
+sub[[x]]    0.970095   0.002645   366.8   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.03962 on 3299 degrees of freedom
+Multiple R-squared:  0.9761,	Adjusted R-squared:  0.9761 
+F-statistic: 1.346e+05 on 1 and 3299 DF,  p-value: < 2.2e-16
+
+[1] "############################"
+[1] "Figure S2"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( genome_size )"
+[1] ""
+[1] "------WITH INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.89242 -0.42939  0.01278  0.42718  1.40238 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept) -0.06169    0.05915  -1.043   0.2974  
+sub[[x]]     0.23708    0.11490   2.063   0.0395 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.6021 on 645 degrees of freedom
+Multiple R-squared:  0.006557,	Adjusted R-squared:  0.005017 
+F-statistic: 4.257 on 1 and 645 DF,  p-value: 0.03948
+
+[1] "############################"
+[1] "Figure S3"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( d1_mid )"
+[1] ""
+[1] "------WITH INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.81941 -0.40549  0.04316  0.39839  1.25447 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept) -0.005852   0.028214  -0.207    0.836
+sub[[x]]     0.045212   0.094095   0.480    0.631
+
+Residual standard error: 0.5779 on 528 degrees of freedom
+Multiple R-squared:  0.0004371,	Adjusted R-squared:  -0.001456 
+F-statistic: 0.2309 on 1 and 528 DF,  p-value: 0.6311
+
+[1] "############################"
+[1] "Figure S4"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( d1_mid )"
+[1] ""
+[1] "------WITH INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.85475 -0.10358  0.01744  0.11580  0.55126 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.580764   0.003811 152.385   <2e-16 ***
+sub[[x]]    0.111841   0.013493   8.289   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1803 on 3501 degrees of freedom
+Multiple R-squared:  0.01925,	Adjusted R-squared:  0.01897 
+F-statistic:  68.7 on 1 and 3501 DF,  p-value: < 2.2e-16
+
+[1] "############################"
+[1] "Figure S5"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( genome_size )"
+[1] ""
+[1] "------KINGDOM: BACTERIA------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.98690 -0.42127  0.02159  0.45359  1.36244 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept) 0.144291   0.086047   1.677   0.0942 .
+sub[[x]]    0.007676   0.154593   0.050   0.9604  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.6124 on 472 degrees of freedom
+Multiple R-squared:  5.224e-06,	Adjusted R-squared:  -0.002113 
+F-statistic: 0.002466 on 1 and 472 DF,  p-value: 0.9604
+
+[1] "############################"
+[1] "Figure S5"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( genome_size )"
+[1] ""
+[1] "------KINGDOM: ARCHAEA------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.2811 -0.3200  0.0157  0.3863  1.0673 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept) -0.01127    0.09915  -0.114   0.9097  
+sub[[x]]    -0.58103    0.24847  -2.338   0.0207 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.477 on 144 degrees of freedom
+Multiple R-squared:  0.03658,	Adjusted R-squared:  0.02989 
+F-statistic: 5.468 on 1 and 144 DF,  p-value: 0.02074
+
+[1] "############################"
+[1] "Figure S6"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( d1_mid )"
+[1] ""
+[1] "------KINGDOM: BACTERIA------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.93132 -0.33936  0.05487  0.40140  1.13310 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.14203    0.03653   3.887  0.00012 ***
+sub[[x]]     0.16469    0.12371   1.331  0.18395    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.571 on 368 degrees of freedom
+Multiple R-squared:  0.004792,	Adjusted R-squared:  0.002088 
+F-statistic: 1.772 on 1 and 368 DF,  p-value: 0.1839
+
+[1] "############################"
+[1] "Figure S6"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( d1_mid )"
+[1] ""
+[1] "------KINGDOM: ARCHAEA------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.35969 -0.27755 -0.03539  0.36128  0.90223 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.29457    0.03768  -7.817 9.05e-13 ***
+sub[[x]]     0.30725    0.12521   2.454   0.0153 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4588 on 149 degrees of freedom
+Multiple R-squared:  0.03884,	Adjusted R-squared:  0.03239 
+F-statistic: 6.021 on 1 and 149 DF,  p-value: 0.01529
+
+[1] "############################"
+[1] "Figure S7"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( d1_mid )"
+[1] ""
+[1] "------KINGDOM: BACTERIA------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.77302 -0.10322  0.01262  0.10912  0.53801 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.593601   0.003801 156.185  < 2e-16 ***
+sub[[x]]    0.107360   0.013704   7.834 6.34e-15 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1696 on 3262 degrees of freedom
+Multiple R-squared:  0.01847,	Adjusted R-squared:  0.01817 
+F-statistic: 61.37 on 1 and 3262 DF,  p-value: 6.34e-15
+
+[1] "############################"
+[1] "Figure S7"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( d1_mid )"
+[1] ""
+[1] "------KINGDOM: ARCHAEA------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.72742 -0.13644  0.02494  0.13884  0.29309 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.44508    0.01243  35.802   <2e-16 ***
+sub[[x]]     0.07180    0.04221   1.701   0.0905 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1734 on 202 degrees of freedom
+Multiple R-squared:  0.01412,	Adjusted R-squared:  0.009241 
+F-statistic: 2.893 on 1 and 202 DF,  p-value: 0.09048
+
+[1] "############################"
+[1] "Figure S8"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( rRNA16S_genes )"
+[1] ""
+[1] "------ALL GROWTH TEMPERATURES------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.79911 -0.31642  0.07665  0.37675  0.90974 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.33979    0.04360  -7.794 6.03e-14 ***
+sub[[x]]     0.99666    0.07678  12.980  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4971 on 388 degrees of freedom
+Multiple R-squared:  0.3028,	Adjusted R-squared:  0.301 
+F-statistic: 168.5 on 1 and 388 DF,  p-value: < 2.2e-16
+
+[1] "############################"
+[1] "Figure S8"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( rRNA16S_genes )"
+[1] ""
+[1] "------GROWTH TEMPERATURE <= 50C------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.7119 -0.3195  0.1156  0.4043  0.8559 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.50341    0.06653  -7.567 6.33e-13 ***
+sub[[x]]     1.25047    0.10484  11.928  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.5168 on 265 degrees of freedom
+Multiple R-squared:  0.3493,	Adjusted R-squared:  0.3469 
+F-statistic: 142.3 on 1 and 265 DF,  p-value: < 2.2e-16
+
+[1] "############################"
+[1] "Figure S9"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( rRNA16S_genes )"
+[1] ""
+[1] "------ALL GROWTH TEMPERATURES------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.94502 -0.14874  0.01202  0.14817  0.62053 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.41992    0.00778   53.98   <2e-16 ***
+sub[[x]]     0.27368    0.01311   20.88   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2062 on 2726 degrees of freedom
+Multiple R-squared:  0.1379,	Adjusted R-squared:  0.1375 
+F-statistic: 435.9 on 1 and 2726 DF,  p-value: < 2.2e-16
+
+[1] "############################"
+[1] "Figure S9"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( rRNA16S_genes )"
+[1] ""
+[1] "------GROWTH TEMPERATURE <= 50C------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.5510 -0.1411  0.0155  0.1246  0.6100 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.50117    0.01094  45.815   <2e-16 ***
+sub[[x]]     0.15620    0.01707   9.151   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1921 on 1665 degrees of freedom
+Multiple R-squared:  0.04789,	Adjusted R-squared:  0.04732 
+F-statistic: 83.75 on 1 and 1665 DF,  p-value: < 2.2e-16
+
+[1] "############################"
+[1] "Figure S10"
+[1] ""
+[1] "y = log10( d1_mid ) vs x = log10( rRNA16S_genes )"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.72854 -0.15179 -0.02124  0.12150  1.38484 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.20875    0.01637 -12.749  < 2e-16 ***
+sub[[x]]     0.12471    0.02702   4.616 4.47e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2435 on 925 degrees of freedom
+Multiple R-squared:  0.02251,	Adjusted R-squared:  0.02146 
+F-statistic:  21.3 on 1 and 925 DF,  p-value: 4.47e-06
+
+[1] "############################"
+[1] "Figure S11"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( d1_mid )"
+[1] ""
+[1] "------SHAPE: Rods------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.78209 -0.09702  0.00952  0.10001  0.50478 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.600417   0.004367 137.481  < 2e-16 ***
+sub[[x]]    0.097205   0.016163   6.014 2.08e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1563 on 2466 degrees of freedom
+Multiple R-squared:  0.01446,	Adjusted R-squared:  0.01406 
+F-statistic: 36.17 on 1 and 2466 DF,  p-value: 2.078e-09
+
+[1] "############################"
+[1] "Figure S11"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( d1_mid )"
+[1] ""
+[1] "------SHAPE: Spheroids------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.70473 -0.12594 -0.02007  0.15736  0.56841 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.45118    0.01137  39.669  < 2e-16 ***
+sub[[x]]     0.14927    0.05046   2.958  0.00337 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1858 on 265 degrees of freedom
+Multiple R-squared:  0.03197,	Adjusted R-squared:  0.02831 
+F-statistic:  8.75 on 1 and 265 DF,  p-value: 0.003375
+
+[1] "############################"
+[1] "Figure S12"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( volume )"
+[1] ""
+[1] "------WITH INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.79507 -0.41857  0.03863  0.41024  1.18689 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept) -0.02721    0.03015  -0.902    0.368
+sub[[x]]     0.02111    0.05183   0.407    0.684
+
+Residual standard error: 0.5902 on 382 degrees of freedom
+Multiple R-squared:  0.0004342,	Adjusted R-squared:  -0.002183 
+F-statistic: 0.1659 on 1 and 382 DF,  p-value: 0.684
+
+[1] "############################"
+[1] "Figure S12"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( volume )"
+[1] ""
+[1] "------NO INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.79752 -0.42056  0.03492  0.41863  1.18309 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept) -0.02424    0.03027  -0.801    0.424
+sub[[x]]     0.02178    0.05250   0.415    0.678
+
+Residual standard error: 0.5876 on 375 degrees of freedom
+Multiple R-squared:  0.0004588,	Adjusted R-squared:  -0.002207 
+F-statistic: 0.1721 on 1 and 375 DF,  p-value: 0.6785
+
+[1] "############################"
+[1] "Figure S13"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( volume )"
+[1] ""
+[1] "------WITH INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.8209 -0.1026  0.0156  0.1116  0.5055 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.573005   0.003388 169.129  < 2e-16 ***
+sub[[x]]    0.043812   0.006000   7.302 3.73e-13 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.167 on 2627 degrees of freedom
+Multiple R-squared:  0.01989,	Adjusted R-squared:  0.01952 
+F-statistic: 53.32 on 1 and 2627 DF,  p-value: 3.732e-13
+
+[1] "############################"
+[1] "Figure S13"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( volume )"
+[1] ""
+[1] "------NO INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.83613 -0.10272  0.01449  0.10856  0.51088 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.573918   0.003316 173.065   <2e-16 ***
+sub[[x]]    0.033531   0.005956   5.629    2e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1633 on 2613 degrees of freedom
+Multiple R-squared:  0.01198,	Adjusted R-squared:  0.0116 
+F-statistic: 31.69 on 1 and 2613 DF,  p-value: 2.001e-08
+
+[1] "############################"
+[1] "Figure 1a"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( genome_size )"
+[1] ""
+[1] "------NO INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.89906 -0.42651  0.00679  0.43303  1.40263 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept) -0.04097    0.06711  -0.611    0.542
+sub[[x]]     0.20811    0.12812   1.624    0.105
+
+Residual standard error: 0.6041 on 618 degrees of freedom
+Multiple R-squared:  0.004251,	Adjusted R-squared:  0.00264 
+F-statistic: 2.639 on 1 and 618 DF,  p-value: 0.1048
+
+[1] "############################"
+[1] "Figure 1b"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( d1_mid )"
+[1] ""
+[1] "------NO INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.82289 -0.40900  0.03862  0.40038  1.25091 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept) -0.002041   0.028270  -0.072    0.942
+sub[[x]]     0.046321   0.095196   0.487    0.627
+
+Residual standard error: 0.5759 on 519 degrees of freedom
+Multiple R-squared:  0.000456,	Adjusted R-squared:  -0.00147 
+F-statistic: 0.2368 on 1 and 519 DF,  p-value: 0.6268
+
+[1] "############################"
+[1] "Figure 1c"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( d1_mid )"
+[1] ""
+[1] "------NO INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.85849 -0.10506  0.01328  0.11198  0.54821 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.581444   0.003672 158.329  < 2e-16 ***
+sub[[x]]    0.086046   0.013192   6.522 7.92e-11 ***
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 0.1732 on 3466 degrees of freedom
+Multiple R-squared:  0.01213,	Adjusted R-squared:  0.01184 
+F-statistic: 42.54 on 1 and 3466 DF,  p-value: 7.923e-11
+
+[1] "############################"
+[1] "Figure 2"
+[1] "------NO INTRACELLULAR------"
+[1] "############################"
+[1] "Figure S1"
+[1] ""
+[1] "y = log10( coding_genes ) vs x = log10( genome_size )"
+[1] ""
+[1] "------WITH INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.43916 -0.01898  0.00252  0.02220  0.23811 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 2.966292   0.001558  1904.4   <2e-16 ***
+sub[[x]]    0.970095   0.002645   366.8   <2e-16 ***
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 0.03962 on 3299 degrees of freedom
+Multiple R-squared:  0.9761,	Adjusted R-squared:  0.9761 
+F-statistic: 1.346e+05 on 1 and 3299 DF,  p-value: < 2.2e-16
+
+[1] "############################"
+[1] "Figure S2"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( genome_size )"
+[1] ""
+[1] "------WITH INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.89242 -0.42939  0.01278  0.42718  1.40238 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept) -0.06169    0.05915  -1.043   0.2974  
+sub[[x]]     0.23708    0.11490   2.063   0.0395 *
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 0.6021 on 645 degrees of freedom
+Multiple R-squared:  0.006557,	Adjusted R-squared:  0.005017 
+F-statistic: 4.257 on 1 and 645 DF,  p-value: 0.03948
+
+[1] "############################"
+[1] "Figure S3"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( d1_mid )"
+[1] ""
+[1] "------WITH INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.81941 -0.40549  0.04316  0.39839  1.25447 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept) -0.005852   0.028214  -0.207    0.836
+sub[[x]]     0.045212   0.094095   0.480    0.631
+
+Residual standard error: 0.5779 on 528 degrees of freedom
+Multiple R-squared:  0.0004371,	Adjusted R-squared:  -0.001456 
+F-statistic: 0.2309 on 1 and 528 DF,  p-value: 0.6311
+
+[1] "############################"
+[1] "Figure S4"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( d1_mid )"
+[1] ""
+[1] "------WITH INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.85475 -0.10358  0.01744  0.11580  0.55126 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.580764   0.003811 152.385   <2e-16 ***
+sub[[x]]    0.111841   0.013493   8.289   <2e-16 ***
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 0.1803 on 3501 degrees of freedom
+Multiple R-squared:  0.01925,	Adjusted R-squared:  0.01897 
+F-statistic:  68.7 on 1 and 3501 DF,  p-value: < 2.2e-16
+
+[1] "############################"
+[1] "Figure S5"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( genome_size )"
+[1] ""
+[1] "------KINGDOM: BACTERIA------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.98690 -0.42127  0.02159  0.45359  1.36244 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept) 0.144291   0.086047   1.677   0.0942 .
+sub[[x]]    0.007676   0.154593   0.050   0.9604  
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 0.6124 on 472 degrees of freedom
+Multiple R-squared:  5.224e-06,	Adjusted R-squared:  -0.002113 
+F-statistic: 0.002466 on 1 and 472 DF,  p-value: 0.9604
+
+[1] "############################"
+[1] "Figure S5"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( genome_size )"
+[1] ""
+[1] "------KINGDOM: ARCHAEA------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.2811 -0.3200  0.0157  0.3863  1.0673 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept) -0.01127    0.09915  -0.114   0.9097  
+sub[[x]]    -0.58103    0.24847  -2.338   0.0207 *
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 0.477 on 144 degrees of freedom
+Multiple R-squared:  0.03658,	Adjusted R-squared:  0.02989 
+F-statistic: 5.468 on 1 and 144 DF,  p-value: 0.02074
+
+[1] "############################"
+[1] "Figure S6"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( d1_mid )"
+[1] ""
+[1] "------KINGDOM: BACTERIA------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.93132 -0.33936  0.05487  0.40140  1.13310 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.14203    0.03653   3.887  0.00012 ***
+sub[[x]]     0.16469    0.12371   1.331  0.18395    
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 0.571 on 368 degrees of freedom
+Multiple R-squared:  0.004792,	Adjusted R-squared:  0.002088 
+F-statistic: 1.772 on 1 and 368 DF,  p-value: 0.1839
+
+[1] "############################"
+[1] "Figure S6"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( d1_mid )"
+[1] ""
+[1] "------KINGDOM: ARCHAEA------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.35969 -0.27755 -0.03539  0.36128  0.90223 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.29457    0.03768  -7.817 9.05e-13 ***
+sub[[x]]     0.30725    0.12521   2.454   0.0153 *  
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 0.4588 on 149 degrees of freedom
+Multiple R-squared:  0.03884,	Adjusted R-squared:  0.03239 
+F-statistic: 6.021 on 1 and 149 DF,  p-value: 0.01529
+
+[1] "############################"
+[1] "Figure S7"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( d1_mid )"
+[1] ""
+[1] "------KINGDOM: BACTERIA------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.77302 -0.10322  0.01262  0.10912  0.53801 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.593601   0.003801 156.185  < 2e-16 ***
+sub[[x]]    0.107360   0.013704   7.834 6.34e-15 ***
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 0.1696 on 3262 degrees of freedom
+Multiple R-squared:  0.01847,	Adjusted R-squared:  0.01817 
+F-statistic: 61.37 on 1 and 3262 DF,  p-value: 6.34e-15
+
+[1] "############################"
+[1] "Figure S7"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( d1_mid )"
+[1] ""
+[1] "------KINGDOM: ARCHAEA------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.72742 -0.13644  0.02494  0.13884  0.29309 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.44508    0.01243  35.802   <2e-16 ***
+sub[[x]]     0.07180    0.04221   1.701   0.0905 .  
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 0.1734 on 202 degrees of freedom
+Multiple R-squared:  0.01412,	Adjusted R-squared:  0.009241 
+F-statistic: 2.893 on 1 and 202 DF,  p-value: 0.09048
+
+[1] "############################"
+[1] "Figure S8"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( rRNA16S_genes )"
+[1] ""
+[1] "------ALL GROWTH TEMPERATURES------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.79911 -0.31642  0.07665  0.37675  0.90974 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.33979    0.04360  -7.794 6.03e-14 ***
+sub[[x]]     0.99666    0.07678  12.980  < 2e-16 ***
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 0.4971 on 388 degrees of freedom
+Multiple R-squared:  0.3028,	Adjusted R-squared:  0.301 
+F-statistic: 168.5 on 1 and 388 DF,  p-value: < 2.2e-16
+
+[1] "############################"
+[1] "Figure S8"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( rRNA16S_genes )"
+[1] ""
+[1] "------GROWTH TEMPERATURE <= 50C------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.7119 -0.3195  0.1156  0.4043  0.8559 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.50341    0.06653  -7.567 6.33e-13 ***
+sub[[x]]     1.25047    0.10484  11.928  < 2e-16 ***
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 0.5168 on 265 degrees of freedom
+Multiple R-squared:  0.3493,	Adjusted R-squared:  0.3469 
+F-statistic: 142.3 on 1 and 265 DF,  p-value: < 2.2e-16
+
+[1] "############################"
+[1] "Figure S9"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( rRNA16S_genes )"
+[1] ""
+[1] "------ALL GROWTH TEMPERATURES------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.94502 -0.14874  0.01202  0.14817  0.62053 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.41992    0.00778   53.98   <2e-16 ***
+sub[[x]]     0.27368    0.01311   20.88   <2e-16 ***
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 0.2062 on 2726 degrees of freedom
+Multiple R-squared:  0.1379,	Adjusted R-squared:  0.1375 
+F-statistic: 435.9 on 1 and 2726 DF,  p-value: < 2.2e-16
+
+[1] "############################"
+[1] "Figure S9"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( rRNA16S_genes )"
+[1] ""
+[1] "------GROWTH TEMPERATURE <= 50C------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.5510 -0.1411  0.0155  0.1246  0.6100 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.50117    0.01094  45.815   <2e-16 ***
+sub[[x]]     0.15620    0.01707   9.151   <2e-16 ***
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 0.1921 on 1665 degrees of freedom
+Multiple R-squared:  0.04789,	Adjusted R-squared:  0.04732 
+F-statistic: 83.75 on 1 and 1665 DF,  p-value: < 2.2e-16
+
+[1] "############################"
+[1] "Figure S10"
+[1] ""
+[1] "y = log10( d1_mid ) vs x = log10( rRNA16S_genes )"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.72854 -0.15179 -0.02124  0.12150  1.38484 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.20875    0.01637 -12.749  < 2e-16 ***
+sub[[x]]     0.12471    0.02702   4.616 4.47e-06 ***
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 0.2435 on 925 degrees of freedom
+Multiple R-squared:  0.02251,	Adjusted R-squared:  0.02146 
+F-statistic:  21.3 on 1 and 925 DF,  p-value: 4.47e-06
+
+[1] "############################"
+[1] "Figure S11"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( d1_mid )"
+[1] ""
+[1] "------SHAPE: Rods------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.78209 -0.09702  0.00952  0.10001  0.50478 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.600417   0.004367 137.481  < 2e-16 ***
+sub[[x]]    0.097205   0.016163   6.014 2.08e-09 ***
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 0.1563 on 2466 degrees of freedom
+Multiple R-squared:  0.01446,	Adjusted R-squared:  0.01406 
+F-statistic: 36.17 on 1 and 2466 DF,  p-value: 2.078e-09
+
+[1] "############################"
+[1] "Figure S11"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( d1_mid )"
+[1] ""
+[1] "------SHAPE: Spheroids------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.70473 -0.12594 -0.02007  0.15736  0.56841 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.45118    0.01137  39.669  < 2e-16 ***
+sub[[x]]     0.14927    0.05046   2.958  0.00337 ** 
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 0.1858 on 265 degrees of freedom
+Multiple R-squared:  0.03197,	Adjusted R-squared:  0.02831 
+F-statistic:  8.75 on 1 and 265 DF,  p-value: 0.003375
+
+[1] "############################"
+[1] "Figure S12"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( volume )"
+[1] ""
+[1] "------WITH INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.79507 -0.41857  0.03863  0.41024  1.18689 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept) -0.02721    0.03015  -0.902    0.368
+sub[[x]]     0.02111    0.05183   0.407    0.684
+
+Residual standard error: 0.5902 on 382 degrees of freedom
+Multiple R-squared:  0.0004342,	Adjusted R-squared:  -0.002183 
+F-statistic: 0.1659 on 1 and 382 DF,  p-value: 0.684
+
+[1] "############################"
+[1] "Figure S12"
+[1] ""
+[1] "y = temp_adjusted_maxgrowth vs x = log10( volume )"
+[1] ""
+[1] "------NO INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.79752 -0.42056  0.03492  0.41863  1.18309 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept) -0.02424    0.03027  -0.801    0.424
+sub[[x]]     0.02178    0.05250   0.415    0.678
+
+Residual standard error: 0.5876 on 375 degrees of freedom
+Multiple R-squared:  0.0004588,	Adjusted R-squared:  -0.002207 
+F-statistic: 0.1721 on 1 and 375 DF,  p-value: 0.6785
+
+[1] "############################"
+[1] "Figure S13"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( volume )"
+[1] ""
+[1] "------WITH INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.8209 -0.1026  0.0156  0.1116  0.5055 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.573005   0.003388 169.129  < 2e-16 ***
+sub[[x]]    0.043812   0.006000   7.302 3.73e-13 ***
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 0.167 on 2627 degrees of freedom
+Multiple R-squared:  0.01989,	Adjusted R-squared:  0.01952 
+F-statistic: 53.32 on 1 and 2627 DF,  p-value: 3.732e-13
+
+[1] "############################"
+[1] "Figure S13"
+[1] ""
+[1] "y = log10( genome_size ) vs x = log10( volume )"
+[1] ""
+[1] "------NO INTRACELLULAR------"
+[1] "------LINEAR REGRESSION------"
+
+Call:
+lm(formula = sub[[y]] ~ sub[[x]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.83613 -0.10272  0.01449  0.10856  0.51088 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.573918   0.003316 173.065   <2e-16 ***
+sub[[x]]    0.033531   0.005956   5.629    2e-08 ***
+---
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 0.1633 on 2613 degrees of freedom
+Multiple R-squared:  0.01198,	Adjusted R-squared:  0.0116 
+F-statistic: 31.69 on 1 and 2613 DF,  p-value: 2.001e-08
+

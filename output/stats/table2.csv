@@ -1,0 +1,10 @@
+"model","AIC","r2","df"
+"temp_adjusted_maxgrowth ~ d1_mid_log10",700.689714140116,0.000893098653902343,384
+"temp_adjusted_maxgrowth ~ genome_size_log10",700.996528909908,9.86359227126074e-05,384
+"temp_adjusted_maxgrowth ~ d1_mid_log10 * genome_size_log10",698.949713709117,0.0156403641761775,382
+"temp_adjusted_maxgrowth ~ poly(d1_mid_log10, 2)",679.133075917445,0.0600429139198781,383
+"temp_adjusted_maxgrowth ~ poly(genome_size_log10, 2)",702.851697138237,0.000473740380835821,383
+"temp_adjusted_maxgrowth ~ habitat",667.979963747194,0.10554485215936,379
+"temp_adjusted_maxgrowth ~ poly(d1_mid_log10, 2) + habitat",644.291081263607,0.167459471660601,377
+"temp_adjusted_maxgrowth ~ poly(d1_mid_log10, 2) * habitat",654.688074529866,0.196288034382314,365
+"temp_adjusted_maxgrowth ~ poly(d1_mid_log10, 2) * genome_size_log10 * habitat",679.326042943611,0.231637523178016,344

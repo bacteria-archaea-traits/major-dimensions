@@ -1,0 +1,4 @@
+"trait","Genome.size","Cell.radial.diameter","rRNA.operon.copy.number"
+"Normalised max growth rate","0.00425 (df=618)","0.000456 (df=519)","0.303 (df=388)"
+"Genome size",NA,"0.0121 (df=3466)","0.138 (df=2726)"
+"Genome size",NA,NA,"0.0225 (df=925)"

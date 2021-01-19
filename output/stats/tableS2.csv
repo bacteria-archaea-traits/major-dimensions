@@ -1,0 +1,4 @@
+Model,PGLS R_squared,Number of tips (species),Number of nodes
+Tmp. adj. max growth rate vs. log10(genome size),0.00146646093992338,614,268
+log10(d1_mid) vs. log10(genome_size),0.00967627634826402,3441,948
+log10(d1_mid) vs. temp_adjusted_maxgrowth,0.000191811199780651,499,219
