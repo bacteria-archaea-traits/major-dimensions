@@ -5,22 +5,22 @@
 ###################
 
 # Taxonomy files (see Madin et al. 2020)
-nam <- read.csv("data/Madin et al.2020/taxonomy_names.csv", as.is=TRUE)
+nam <- read.csv("data/madin_et_al/taxonomy_names.csv", as.is=TRUE)
 nam <- nam[, c("tax_id","name_txt")] #Removes columns that are not needed
 
-tax <- read.csv("data/Madin et al.2020/ncbi_taxmap.csv", as.is=TRUE)
+tax <- read.csv("data/madin_et_al/ncbi_taxmap.csv", as.is=TRUE)
 tax <- unique(tax[, names(tax)]) #Removes duplicate entries
 
 # Main data frame (see Madin et al. 2020)
-df <- read.csv("data/Madin et al.2020/condensed_species_GTDB[NCBI_fill]_16102020.csv", as.is=TRUE)
+df <- read.csv("data/madin_et_al/condensed_species_GTDB[NCBI_fill]_16102020.csv", as.is=TRUE)
 df <- df[!is.na(df$species),]
 
 # Environment table (see Madin et al. 2020)
-environments <- read.csv("data/Madin et al.2020/environments.csv", as.is=TRUE)
+environments <- read.csv("data/madin_et_al/environments.csv", as.is=TRUE)
 
 # Intracellular organismsm and mycoplasma (see Madin et al. 2020)
-intr <- read.csv("data/Madin et al.2020/intracellular_organisms.csv")
-myco <- read.csv("data/Madin et al.2020/mycoplasma.csv")
+intr <- read.csv("data/madin_et_al/intracellular_organisms.csv")
+myco <- read.csv("data/madin_et_al/mycoplasma.csv")
 
 # Strategy table
 strategies <- read.csv("data/microorganism_strategies.csv", as.is = TRUE)
